@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Game Center</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+        }
+
+        body div {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            height: 100%;
+        }
+
+        ul {
+            width: 130px;
+            font-weight: bold;
+        }
+
+        li {
+            cursor: pointer;
+        }
+
+        li:hover {
+            text-decoration: underline;
+        }
+
+        aside {
+            box-shadow: 0 0 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <aside>
+            <ul>
+                <li onclick="object.data='matching.swf'">Matching Game</li>
+                <li onclick="object.data='maze.swf'">Maze Game</li>
+                <li onclick="object.data='puzzal.swf'">Puzzal Game</li>
+                <li onclick="object.data='bounce.swf'">Bounce Game</li>
+                <li onclick="object.data='thinking.swf'">Thinking Game</li>
+                <li onclick="object.data='firstGame.swf'">Frist Game</li>
+                <li onclick="object.data='about.swf'">About</li>
+            </ul>
+        </aside>
+        <div style="display: flex;justify-content: center;align-items: center;">
+            <object id="object" data="about.swf"
+                style="width: 550px;height: 450px;border: 5px solid;border-radius: 10px;"></object>
+        </div>
+    </div>
+</body>
+
+</html>

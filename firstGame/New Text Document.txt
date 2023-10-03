@@ -1,0 +1,280 @@
+package 
+{
+	import flash.display.MovieClip;
+	import flash.events.KeyboardEvent;
+	
+	/**
+	 * ...
+	 * @author AbanobAtef
+	 */
+	public class firstGame extends MovieClip 
+	{
+		private var leftKeyIsDown:Boolean;
+		private var rightKeyIsDown:Boolean;
+		private var amissilearray:Array;
+		pubilc var mcplayer:MovieClip;
+		public function firstGame() 
+		{
+			stage.addEventListener(keyboardEvent.KEY_Down, keyDown);
+			stage.addEventListener(keyboardEvent.KEY_UP, keyUp);
+			amissilearray = new Array();
+		}
+		private function playercontrol():void
+		{
+			if (leftKeyIsDown==true)
+			{
+				mcplayer.x -= 5;
+			}
+			if (rightKeyIsDown)
+			{
+				mcplayer.x += 5;
+			}
+		}
+		private function ClampplayerToStage():void
+		{
+			if (mcplayer.x<(mcplayer.width/2))
+			{
+				mcplayer.x = mcplayer.width / 2;
+				
+			}
+			if (mcplayer.x>stage.stagewidth-(mcplayer.width/2))
+			{
+				mcplayer.x = stage.width - (mcplayer.width / 2);
+			}
+		}
+		private function gameloop(e:Event):void
+		{
+			playercontrol();
+			clampplayerToStage();
+		}
+		private function keyDown(e:KeyboardEvent):void
+		{
+			if(e.keyCode==37)
+			{
+				leftKeyIsDown = true;
+			}
+			if (e.keyCode==39)
+			{
+				rightKeyIsDown = true;
+			}
+		}
+		private function KeyUp(e:keyboardEvent):void
+		{
+			
+			if(e.keyCode==37)
+			{
+				leftKeyIsDown = false;
+			}
+			if (e.keyCode==39)
+			{
+				rightKeyIsDown = false;
+			}
+			if (e.keycode==32)
+			{
+				firemissicle();
+			}
+		}
+		private function firemissicle():void 
+		{
+			var newMissile:mcmissicilles = new mcmissicilles();
+			stage.addChild(newMissile);
+			newMissile.x = mcplayer.x;
+			newMissile.y = mcplayer.y;
+			amissilearray.push(newMissile);
+		}
+	}
+
+}
+
+
+
+package 
+{
+	import flash.display.MovieClip;
+	import flash.events.KeyboardEvent;
+	
+	/**
+	 * ...
+	 * @author AbanobAtef
+	 */
+	public class firstGame extends MovieClip 
+	{
+		private var leftKeyIsDown:Boolean;
+		private var rightKeyIsDown:Boolean;
+		private var amissilearray:Array;
+		pubilc var mcplayer:MovieClip;
+		public function firstGame() 
+		{
+			stage.addEventListener(keyboardEvent.KEY_Down, keyDown);
+			stage.addEventListener(keyboardEvent.KEY_UP, keyUp);
+			amissilearray = new Array();
+		}
+		private function playercontrol():void
+		{
+			if (leftKeyIsDown==true)
+			{
+				mcplayer.x -= 5;
+			}
+			if (rightKeyIsDown)
+			{
+				mcplayer.x += 5;
+			}
+		}
+		private function ClampplayerToStage():void
+		{
+			if (mcplayer.x<(mcplayer.width/2))
+			{
+				mcplayer.x = mcplayer.width / 2;
+				
+			}
+			if (mcplayer.x>stage.stagewidth-(mcplayer.width/2))
+			{
+				mcplayer.x = stage.width - (mcplayer.width / 2);
+			}
+		}
+		private function gameloop(e:Event):void
+		{
+			playercontrol();
+			clampplayerToStage();
+		}
+		private function keyDown(e:KeyboardEvent):void
+		{
+			if(e.keyCode==37)
+			{
+				leftKeyIsDown = true;
+			}
+			if (e.keyCode==39)
+			{
+				rightKeyIsDown = true;
+			}
+		}
+		private function KeyUp(e:keyboardEvent):void
+		{
+			
+			if(e.keyCode==37)
+			{
+				leftKeyIsDown = false;
+			}
+			if (e.keyCode==39)
+			{
+				rightKeyIsDown = false;
+			}
+			if (e.keycode==32)
+			{
+				firemissicle();
+			}
+		}
+		private function firemissicle():void 
+		{
+			var newMissile:mcmissicilles = new mcmissicilles();
+			stage.addChild(newMissile);
+			newMissile.x = mcplayer.x;
+			newMissile.y = mcplayer.y;
+			amissilearray.push(newMissile);
+		}
+	}
+
+}
+
+
+package 
+{
+	import flash.display.MovieClip;
+	import flash.events.KeyboardEvent;
+	
+	/**
+	 * ...
+	 * @author AbanobAtef
+	 */
+	public class firstGame extends MovieClip 
+	{
+		private var leftKeyIsDown:Boolean;
+		private var rightKeyIsDown:Boolean;
+		private var amissilearray:Array;
+		pubilc var mcplayer:MovieClip;
+		public function firstGame() 
+		{
+			stage.addEventListener(keyboardEvent.KEY_Down, keyDown);
+			stage.addEventListener(keyboardEvent.KEY_UP, keyUp);
+			amissilearray = new Array();
+		}
+		private function playercontrol():void
+		{
+			if (leftKeyIsDown==true)
+			{
+				mcplayer.x -= 5;
+			}
+			if (rightKeyIsDown)
+			{
+				mcplayer.x += 5;
+			}
+		}
+		private function ClampplayerToStage():void
+		{
+			if (mcplayer.x<(mcplayer.width/2))
+			{
+				mcplayer.x = mcplayer.width / 2;
+				
+			}
+			if (mcplayer.x>stage.stagewidth-(mcplayer.width/2))
+			{
+				mcplayer.x = stage.width - (mcplayer.width / 2);
+			}
+		}
+		private function gameloop(e:Event):void
+		{
+			playercontrol();
+			clampplayerToStage();
+		}
+		private function keyDown(e:KeyboardEvent):void
+		{
+			if(e.keyCode==37)
+			{
+				leftKeyIsDown = true;
+			}
+			if (e.keyCode==39)
+			{
+				rightKeyIsDown = true;
+			}
+		}
+		private function KeyUp(e:keyboardEvent):void
+		{
+			
+			if(e.keyCode==37)
+			{
+				leftKeyIsDown = false;
+			}
+			if (e.keyCode==39)
+			{
+				rightKeyIsDown = false;
+			}
+			if (e.keycode==32)
+			{
+				firemissicle();
+			}
+		}
+		private function firemissicle():void 
+		{
+			var newMissile:mcmissicilles = new mcmissicilles();
+			stage.addChild(newMissile);
+			newMissile.x = mcplayer.x;
+			newMissile.y = mcplayer.y;
+			amissilearray.push(newMissile);
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
